@@ -5,7 +5,7 @@ NGYT777GG WORM AI Telegram Bot with Flask Web Server
 A professional Telegram bot with channel verification, Venice AI integration, 
 admin broadcast functionality, and Flask web server for Render hosting.
 
-Author: @GOAT_NG
+Author: @rajputserver
 """
 
 import logging
@@ -37,7 +37,7 @@ def start_flask_server():
 
 def start_telegram_bot():
     """Start Telegram bot"""
-    logger.info("🚀 Starting NGYT777GG WORM AI Bot...")
+    logger.info("🚀 Starting WORM AI Bot...")
     
     try:
         # Create the Application with better network settings for cloud deployment
@@ -73,11 +73,7 @@ def start_telegram_bot():
             allowed_updates=["message", "callback_query"],
             poll_interval=1.0,
             timeout=20,
-            bootstrap_retries=5,
-            read_timeout=30,
-            write_timeout=30,
-            connect_timeout=30,
-            pool_timeout=1
+            bootstrap_retries=5
         )
         
     except Exception as e:
@@ -87,7 +83,7 @@ def start_telegram_bot():
 
 def main():
     """Main function to start both Flask server and Telegram bot"""
-    logger.info("🚀 Starting NGYT777GG WORM AI Bot with Flask web server...")
+    logger.info("🚀 Starting WORM AI Bot with Flask web server...")
     
     # Start Flask server in a separate thread
     flask_thread = threading.Thread(target=start_flask_server, daemon=True)
