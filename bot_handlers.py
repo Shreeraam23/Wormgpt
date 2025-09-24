@@ -45,13 +45,13 @@ class BotHandlers:
         """Check if user is member of all required channels"""
         user_id = update.effective_user.id
         
-        # Check membership for NG_PRO_BOT_DEV channel
+        # Check membership for rajputserver channel
         try:
-            member = await context.bot.get_chat_member("@NG_PRO_BOT_DEV", user_id)
+            member = await context.bot.get_chat_member("@rajputserver", user_id)
             if member.status in [ChatMember.LEFT, ChatMember.BANNED]:
                 return False
         except Exception as e:
-            logging.warning(f"Could not check membership for NG_PRO_BOT_DEV: {e}")
+            logging.warning(f"Could not check membership for rajputserver: {e}")
             # If we can't check, we'll assume they need to join
             return False
         
@@ -65,7 +65,7 @@ To use this bot, you need to join our channel first:
 
 📢 *Required Channel:*
 
-@NG\\_PRO\\_BOT\\_DEV
+@rajputserver
 
 Please join the channel to unlock AI features\\!"""
         
@@ -129,7 +129,7 @@ Please join the channel to unlock AI features\\!"""
             if is_member:
                 self.db.verify_user(query.from_user.id)
                 await query.edit_message_text(
-                    "✅ **Verification Successful!**\n\nWelcome to NGYT777GG WORM AI!",
+                    "✅ **Verification Successful!**\n\nWelcome to WORM AI!",
                     parse_mode=ParseMode.MARKDOWN
                 )
                 await self.send_welcome_message(update, context)
