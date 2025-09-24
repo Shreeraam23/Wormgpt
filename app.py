@@ -18,7 +18,7 @@ def home():
     """Home endpoint"""
     return jsonify({
         "status": "online",
-        "service": "NGYT777GG WORM AI Telegram Bot",
+        "service": "WORM AI Telegram Bot",
         "message": "Bot is running and ready to serve!"
     })
 
@@ -36,7 +36,7 @@ def health():
     """Health check endpoint"""
     return jsonify({
         "status": "healthy",
-        "service": "NGYT777GG WORM AI Bot",
+        "service": "WORM AI Bot",
         "uptime": "running"
     })
 
